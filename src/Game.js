@@ -15,8 +15,8 @@ export default function Game () {
     };
 
     squares[i] = xIsNext? 'X': 'O';
-    setHistory(history.concat([squares]))
-    setXIsNext(!xIsNext);
+    setHistory(history => history.concat([squares]))
+    setXIsNext(xIsNext => !xIsNext);
   }
 
   const squares = history[history.length - 1];
